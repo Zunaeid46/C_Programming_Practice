@@ -1,0 +1,15 @@
+// A Divisibility Problem - Codeforces.
+// Find the minimum number of times to increase a by 1 until it is divisible by b.
+
+#include <stdio.h>
+int main()
+{
+    int a,b,move;
+    scanf("%d %d",&a, &b);
+
+    for(move=0;(a+move)%b!=0;move++)
+    {
+
+    }
+    printf("Moves = %d",move);
+}
