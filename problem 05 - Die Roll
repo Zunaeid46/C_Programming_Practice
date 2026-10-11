@@ -1,0 +1,21 @@
+/*Die Roll
+  Yakko and Wakko are playing a dice game with Dot.
+  Yakko rolls a die and gets Y, while Wakko gets W.
+  Dot rolls a six-sided die. She wins if her result
+  is greater than or equal to both Y and W.
+  Your task is to find the probability that Dot wins
+  and express it as an irreducible fraction.
+*/
+
+#include <stdio.h>
+int main()
+{
+    int y,w,dot,count=0;
+    scanf("%d %d",&y, &w);
+
+    for(dot=1;dot<=6;dot++)
+    {
+        count=count+(dot>=y&&dot>=w);
+    }
+    printf("%d/6",count);
+}
