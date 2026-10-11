@@ -1,0 +1,22 @@
+/* 
+   Only One Digit
+   Given an integer n, find the smallest non-negative
+   integer x that shares at least one common digit with n.
+   In other words, x must contain a digit that also
+   appears in n.  
+   Output the minimum possible value of x.
+*/
+
+#include <stdio.h>
+int main()
+{
+    int n,digit,min=9;
+    scanf("%d",&n);
+
+    for( ;n>0;n=n/10)
+    {
+        digit=n%10;
+        min=(digit<min)*digit+(digit>=min)*min;
+    }
+    printf("%d",min);
+}
