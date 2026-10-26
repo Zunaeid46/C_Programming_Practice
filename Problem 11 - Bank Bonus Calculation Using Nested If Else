@@ -1,0 +1,35 @@
+/*
+    Calculate a 2% bonus for all account holders
+    and an additional bonus of 5% for female account
+    holders whose balance is more than Tk. 50,000.
+*/
+
+#include <stdio.h>
+int main()
+{
+    int gender ;
+    float balance,bonus;
+
+    printf("Enter your balance : ");
+    scanf("%f",&balance);
+
+    printf("Enter your gender(1 for female,0 for male) : ");
+    scanf("%d",gender);
+
+    if(gender==1)
+    {
+        if(balance>50000)
+        {
+            bonus=balance*5/100;
+        }
+        else
+        {
+            bonus=balance*2/100;
+        }
+    }
+    else
+    {
+        bonus=balance*2/100;
+    }
+    printf("Bonus : %.2f",bonus);
+ }
