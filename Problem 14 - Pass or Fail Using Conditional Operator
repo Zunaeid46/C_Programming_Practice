@@ -1,0 +1,13 @@
+/*
+    Determine whether a student passes or fails
+    based on marks using the conditional operator.
+*/
+
+#include <stdio.h>
+int main()
+{
+    int mark;
+    scanf("%d",&mark);
+
+    mark>=40?printf("pass"):printf("fail");
+}
