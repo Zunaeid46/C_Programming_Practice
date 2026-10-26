@@ -1,0 +1,24 @@
+/*
+    Check whether a student passes or fails and determine
+    the grade based on marks using nested conditional operators.
+*/
+#include <stdio.h>
+
+int main()
+{
+    int mark;
+
+    printf("Enter your mark: ");
+    scanf("%d", &mark);
+
+    (mark >= 40)
+        ? ((mark >= 80) ? printf("A+") :
+           (mark >= 70) ? printf("A") :
+           (mark >= 60) ? printf("B") :
+           (mark >= 50) ? printf("C") :
+           printf("D"))
+        : printf("Fail");
+
+    return 0;
+}
+
